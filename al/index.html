@@ -787,6 +787,15 @@ jawab :</p>
 </p>
 </li>
 </ol>
+<p>Contoh :
+<script type="math/tex; mode=display">
+\begin{aligned}
+2x+y-z=8\\
+-3x-y+2z=-11\\
+-2x+y+2z=-3
+\end{aligned}
+</script>
+</p>
 <div class="codehilite"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">]]</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mi">1</span>
 
@@ -810,7 +819,12 @@ jawab :</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">y = </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">z = </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p>d</p>
+<div class="codehilite"><pre><span></span><code><span class="n">hasilnya</span> <span class="o">:</span> 
+<span class="n">x</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
+</code></pre></div>
+
 <h4 id="metode_iterasi_seidel">Metode Iterasi Seidel<a class="headerlink" href="#metode_iterasi_seidel" title="Permanent link">&para;</a></h4>
 <p>Metode interasi Gauss-Seidel adalah metode yang menggunakan proses iterasi hingga diperoleh nilai-nilai yang berubah-ubah. Metode iterasi Gauss-Seidel dikembangkan dari gagasan metode iterasi pada solusi persamaan tak linier. rumus dan metode gauss seidel:
 <script type="math/tex; mode=display">
@@ -852,25 +866,91 @@ jawab :</p>
     <span class="n">y0</span> <span class="o">=</span> <span class="n">y1</span>
     <span class="n">z0</span> <span class="o">=</span> <span class="n">z1</span>
 
-    <span class="k">if</span> <span class="n">e1</span> <span class="o">&gt;</span> <span class="n">e</span> <span class="ow">and</span> <span class="n">e2</span> <span class="o">&gt;</span> <span class="n">e</span> <span class="ow">and</span> <span class="n">e3</span> <span class="o">&gt;</span> <span class="n">e</span><span class="p">:</span>
-        <span class="n">condition</span> <span class="o">=</span> <span class="kc">False</span>
+   <span class="n">condition</span> <span class="o">=</span> <span class="n">e1</span><span class="o">&gt;</span><span class="n">e</span> <span class="ow">and</span> <span class="n">e2</span><span class="o">&gt;</span><span class="n">e</span> <span class="ow">and</span> <span class="n">e3</span><span class="o">&gt;</span><span class="n">e</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">hasilnya : &quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x1</span><span class="si">}</span><span class="se">\n</span><span class="s2">y = </span><span class="si">{</span><span class="n">y1</span><span class="si">}</span><span class="se">\n</span><span class="s2">z = </span><span class="si">{</span><span class="n">z1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>toleransi error:  0.001
-iterasi-1 : x = 1.75 | y = 3.5 | z = 1.4 
+<div class="codehilite"><pre><span></span><code>toleransi error:  0.0001
+iterasi-1 : x = 0.85
+    y = -1.0275
+    z = 1.010875 
+iterasi-2 : x = 1.0024625
+    y = -0.999825625
+    z = 0.99977990625 
+iterasi-3 : x = 0.999969271875
+    y = -1.00000639546875
+    z = 1.0000021134921877 
+iterasi-4 : x = 1.0000005311226563
+    y = -0.9999999739937891
+    z = 0.999999950788666 
 
 hasilnya : 
-x = 1.75
-y = 3.5
-z = 1.4
+x = 1.0000005311226563
+y = -0.9999999739937891
+z = 0.999999950788666
 </code></pre></div>
 
 <h4 id="metode_iterasi_jacobi">Metode Iterasi jacobi<a class="headerlink" href="#metode_iterasi_jacobi" title="Permanent link">&para;</a></h4>
-<p>Metode Jacobi merupakan salah satu metode penyelesaian sistem persamaan linear (baca: matriks) berdimensi banyak (baca: lebih dari 2). Untuk matriks dengan dimensi kecil (kurang atau sama dengan dua), lebih efektif diselesaikan dengan aturan eliminasi atau metode Cramer.</p>
-<p>dfdf</p>
+<p>Metode Jacobi merupakan salah satu metode yang mana untuk mengkalkulasikan tiap element didalamnya tetap mengambil acuan pada base element itu sendiri yang diinisialisasikan pertama kali, tidak seperti seidel yang pengkalkulasian tiap elementnya berdasarkan pada element sebelumnya yang telah selesai, satu persatu.</p>
+<p>contoh :
+<script type="math/tex; mode=display">
+\begin{aligned}
+4x-y+z=7\\
+4x-8y+z=-21\\
+-2x+y+5z=15
+\end{aligned}
+</script>
+jawab:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">f1</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="o">+</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">:</span> <span class="p">(</span><span class="mi">21</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="mi">8</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">:</span> <span class="p">(</span><span class="mi">14</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">z0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;toleransi error: &#39;</span><span class="p">))</span>
+
+<span class="n">condition</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">f1</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">f2</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="n">z0</span><span class="p">)</span>
+    <span class="n">z1</span> <span class="o">=</span> <span class="n">f3</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="n">z0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;iterasi-</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> : x = </span><span class="si">{</span><span class="n">x1</span><span class="si">}</span><span class="se">\n\t</span><span class="s2">y = </span><span class="si">{</span><span class="n">y1</span><span class="si">}</span><span class="se">\n\t</span><span class="s2">z = </span><span class="si">{</span><span class="n">z1</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
+    <span class="n">e1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x0</span><span class="o">-</span><span class="n">x1</span><span class="p">);</span>
+    <span class="n">e2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">y0</span><span class="o">-</span><span class="n">y1</span><span class="p">);</span>
+    <span class="n">e3</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z0</span><span class="o">-</span><span class="n">z1</span><span class="p">);</span>
+
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="n">x1</span>
+    <span class="n">y0</span> <span class="o">=</span> <span class="n">y1</span>
+    <span class="n">z0</span> <span class="o">=</span> <span class="n">z1</span>
+
+    <span class="n">condition</span> <span class="o">=</span> <span class="n">e1</span><span class="o">&gt;</span><span class="n">e</span> <span class="ow">and</span> <span class="n">e2</span><span class="o">&gt;</span><span class="n">e</span> <span class="ow">and</span> <span class="n">e3</span><span class="o">&gt;</span><span class="n">e</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">hasilnya : &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x1</span><span class="si">}</span><span class="se">\n</span><span class="s2">y = </span><span class="si">{</span><span class="n">y1</span><span class="si">}</span><span class="se">\n</span><span class="s2">z = </span><span class="si">{</span><span class="n">z1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>toleransi error: 0.001
+iterasi-1 : x = 1.75
+    y = 2.625
+    z = 2.8 
+iterasi-2 : x = 1.75
+    y = 3.85
+    z = 1.575 
+
+hasilnya : 
+x = 1.75
+y = 3.85
+z = 1.575
+</code></pre></div>
+
+<p>s</p>
                 
               
               
